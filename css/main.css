@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #131313;
+}
+@font-face {
+  font-family: pop;
+  src: url(../media/Poppins-Bold.woff);
+}
+@font-face {
+  font-family: ri;
+  src: url(../media/Righteous-Regular.woff);
+}
+@font-face {
+  font-family: popre;
+  src: url(../media/Poppins-Regular.woff);
+}
+div.container {
+  position: relative;
+  cursor: pointer;
+}
+
+div.container > div.card {
+  position: relative;
+  width: 350px;
+  height: 450px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+div.container > div.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #dbe91bfd;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+
+div.container > div.card:hover:before {
+  clip-path: circle(300px at 80% -20%);
+}
+
+div.container > div.card:after {
+  content: "Nike";
+  position: absolute;
+  top: 30%;
+  left: -13%;
+  font-size: 200px;
+  font-weight: 800;
+  font-style: italic;
+  font-family: pop;
+  color: rgba(255, 255, 255, 0.04);
+}
+
+div.container > div.card > div.imgBx {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  transition: all 0.8s;
+}
+
+div.container > div.card:hover > div.imgBx {
+  top: 0%;
+  transform: translateY(-25%);
+}
+
+div.container > div.card > div.imgBx > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(20deg);
+  width: 300px;
+}
+
+div.container > div.card > div.contentBx {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 90;
+  font-family: pop;
+}
+
+div.container > div.card:hover > div.contentBx {
+  height: 220px;
+}
+
+div.container > div.card > div.contentBx > h2 {
+  position: relative;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+  transition: all 500ms linear;
+  font-family: ri;
+}
+div.container > div.card:hover > div.contentBx > h2 {
+  letter-spacing: 13px;
+  text-decoration: line-through 0.1px yellow;
+}
+div.container > div.card > div.contentBx > div.size {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 8px 20px;
+  transition: 0.6s;
+  opacity: 0;
+  visibility: hidden;
+}
+div.container > div.card > div.contentBx > div.color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: all 0.6s;
+  opacity: 0;
+  visibility: hidden;
+}
+div.container > div.card:hover > div.contentBx > div.size {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+
+div.container > div.card:hover > div.contentBx > div.color {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.9s;
+}
+
+div.container > div.card > div.contentBx > div.size h3 {
+  color: white;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-decoration: wavy 3px red;
+  margin-right: 10px;
+  font-family: ri;
+}
+div.container > div.card > div.contentBx > div.color h3 {
+  color: white;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-right: 10px;
+  font-family: ri;
+}
+
+div.container > div.card > div.contentBx > div.size > span {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: all 0.3s linear;
+  color: #111;
+  border-radius: 6px;
+  font-family: popre;
+}
+div.container > div.card > div.contentBx > div.size > span.one {
+  box-shadow: 5px 5px 5px black;
+}
+div.container > div.card > div.contentBx > div.size > span.one {
+  box-shadow: 5px 5px 5px black;
+}
+div.container > div.card > div.contentBx > div.size > span.two {
+  box-shadow: 5px 5px 5px black;
+}
+div.container > div.card > div.contentBx > div.size span.three {
+  box-shadow: 5px 5px 5px black;
+}
+div.container > div.card > div.contentBx > div.size span.four {
+  box-shadow: 5px 5px 5px black;
+}
+
+div.container > div.card > div.contentBx > div.color > span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: all 0.3s linear;
+  border: solid black;
+}
+div.container > div.card > div.contentBx > div.color > span.one {
+  background: #e5ff00;
+  box-shadow: 5px 5px 5px black;
+}
+div.container > div.card > div.contentBx > div.color > span.one:hover {
+  border: solid white;
+  scale: 1.4;
+}
+
+div.container > div.card > div.contentBx > div.color > span.two {
+  background: #4b0eda;
+  box-shadow: 5px 5px 5px black;
+}
+div.container > div.card > div.contentBx > div.color > span.two:hover {
+  border: solid white;
+  scale: 1.4;
+}
+
+div.container > div.card > div.contentBx > div.color span.three {
+  background: #c40c34;
+  box-shadow: 5px 5px 5px black;
+}
+div.container > div.card > div.contentBx > div.color span.three:hover {
+  border: solid white;
+  scale: 1.4;
+}
+div.container > div.card > div.contentBx > div.color span.four {
+  background: #0c8ac4;
+  box-shadow: 5px 5px 5px black;
+}
+div.container > div.card > div.contentBx > div.color span.four:hover {
+  border: solid white;
+  scale: 1.4;
+}
+
+div.container > div.card > div.contentBx > a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s;
+  font-family: popre;
+  box-shadow: 5px 5px 5px black;
+}
+div.container > div.card > div.contentBx > a:hover > p {
+  color: white;
+}
+
+div.container > div.card:hover > div.contentBx a {
+  opacity: 1;
+  transform: translateY(3px);
+  transition-delay: 0.9s;
+  font-size: 20px;
+  position: relative;
+}
+div.container > div.card:hover > div.contentBx > a > span {
+  display: none;
+  position: absolute;
+}
+div.container > div.card > div.contentBx a:hover {
+  color: white;
+  transition-delay: 0 !important;
+}
+div.container > div.card > div.contentBx > a:hover > span {
+  display: block;
+  color: black;
+  font-size: 24px;
+  left: 37%;
+  top: 15px;
+}
