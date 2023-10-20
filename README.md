@@ -1,1 +1,1 @@
-# Product-Card---NIKE mimiProject
+# Product-Card---NIKE miniProject
